@@ -1,0 +1,8 @@
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+stores:
+  ribbon:
+    listOfServers: http://localhost:${local.server.port}
