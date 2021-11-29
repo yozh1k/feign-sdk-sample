@@ -8,17 +8,17 @@ Let's assume we have some dummy service with simple controller:
 
 ```java
     @RestController
-	public class StoreController implements StoreApi {
+    public class StoreController implements StoreApi { 
 
-	    private final Map<UUID, Store> stores = new HashMap<>();
-		    
+        private final Map<UUID, Store> stores = new HashMap<>();
+            
         /**
          * List of all stores
          */
-        @GetMapping("stores")	    
+        @GetMapping("stores")        
         public Collection<Store> getStores() {
-	        return stores.values();
-	    }
+            return stores.values();
+        }
 
         /**
          * Search for store
@@ -26,18 +26,18 @@ Let's assume we have some dummy service with simple controller:
          * @return - found store oremtpy Optional
          */
         @GetMapping("stores/{storeId}")    
-   	    public Optional<Store> find(UUID storeId) {
-   	        return Optional.ofNullable(stores.get(storeId));
-   	    }   
-   	    
+           public Optional<Store> find(UUID storeId) {
+               return Optional.ofNullable(stores.get(storeId));
+           }   
+           
         /**
          * Create or update store
          */
-  	    @PostMapping("stores")
-   	    public void add(Store store) {
-   	        stores.put(store.getId(), store);
-   	    }
-   	}
+          @PostMapping("stores")
+           public void add(Store store) {
+               stores.put(store.getId(), store);
+           }
+       }
 ```
 
 And we would like to provide SDK for this API. First of all, lets try to separate the contract and the implementation in couple simple step.
