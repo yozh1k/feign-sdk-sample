@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import ru.kildishev.service.api.dto.Store;
 import ru.kildishev.service.client.StoreClient;
 
@@ -13,7 +12,6 @@ import java.util.Collection;
 import java.util.UUID;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@EnableFeignClients(basePackageClasses = StoreClient.class)
 class StoreControllerTest {
 
     @Autowired

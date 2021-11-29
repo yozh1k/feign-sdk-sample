@@ -12,7 +12,7 @@ public interface StoreApi {
     /**
      * List of all stores
      */
-    @RequestMapping(method = RequestMethod.GET, value = "/stores")
+    @GetMapping("stores")
     Collection<Store> getStores();
 
     /**
@@ -20,12 +20,12 @@ public interface StoreApi {
      * @param storeId - id of the store to find
      * @return - found store oremtpy Optional
      */
-    @RequestMapping(method = RequestMethod.GET, value = "/stores/{storeId}")
+    @GetMapping("stores/{storeId}")
     Optional<Store> find(@PathVariable("storeId") UUID storeId);
 
     /**
      * Create or update store
      */
-    @RequestMapping(method = RequestMethod.POST, value = "/stores")
+    @PostMapping("stores")
     void add(@RequestBody Store store);
 }

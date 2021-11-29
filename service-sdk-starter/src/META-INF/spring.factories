@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=ru.kildishev.service.client.autoconfigure.StoreClientAutoConfiguration

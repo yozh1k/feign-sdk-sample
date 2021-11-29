@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>ru.kildishev</groupId>
-            <artifactId>service-sdk</artifactId>
+            <artifactId>service-sdk-starter</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
