@@ -108,7 +108,7 @@ public class StoreClientAutoConfiguration {
 }
 
 ```
-So now SDK and service compatibility could be controlled with shared based interface. 
+So now SDK and service compatibility is controlled by shared based interface. 
 The only known (for me) issue is that you can't use @RequestMapping anotation on controller class level.
 
 Additionally feign provides client load balancing(with ribbon) and service discovery support(by eureka).
